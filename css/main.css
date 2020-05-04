@@ -2,6 +2,10 @@ body {
   padding: 4rem 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*
 *   _   _ _____    _    ____  _____ ____
 *  | | | | ____|  / \  |  _ \| ____|  _ \
@@ -36,6 +40,58 @@ body {
   padding: 0.5rem 1rem;
   background-color: transparent;
   font-size: 1em;
+}
+
+#grow,
+#conversation,
+#users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#grow div,
+#conversation div,
+#users div {
+  width: 50%;
+}
+
+#grow div,
+#users div {
+  background-color: #f6fbff;
+}
+
+#grow div img,
+#users div img {
+  max-height: 100%;
+}
+
+.users__info,
+.grow__info,
+.conversation__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 /*

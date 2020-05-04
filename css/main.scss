@@ -4,6 +4,10 @@ body {
 	padding: 4rem 0;
 }
 
+img {
+	max-width: 100%;
+}
+
 /*
 *   _   _ _____    _    ____  _____ ____
 *  | | | | ____|  / \  |  _ \| ____|  _ \
@@ -14,6 +18,32 @@ body {
 *
 */
 @import "./header";
+
+#grow,
+#conversation,
+#users {
+	@include flex(stretch, center, row wrap);
+
+	div {
+		width: 50%;
+	}
+}
+
+#grow,
+#users {
+	div {
+		background-color: #f6fbff;
+		img {
+			max-height: 100%;
+		}
+	}
+}
+
+.users__info,
+.grow__info,
+.conversation__info {
+	@include flex(stretch, center, column nowrap);
+}
 
 /*
 *   _____ ___   ___ _____ _____ ____
