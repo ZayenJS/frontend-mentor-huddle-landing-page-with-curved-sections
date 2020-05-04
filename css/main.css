@@ -1,0 +1,58 @@
+body {
+  padding: 4rem 0;
+}
+
+/*
+*   _   _ _____    _    ____  _____ ____
+*  | | | | ____|  / \  |  _ \| ____|  _ \
+*  | |_| |  _|   / _ \ | | | |  _| | |_) |
+*  |  _  | |___ / ___ \| |_| | |___|  _ <
+*  |_| |_|_____/_/   \_\____/|_____|_| \_\
+*
+*
+*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  font-size: 0.8em;
+}
+
+.header__tryit {
+  color: #ff52bf;
+  display: inline-block;
+  border: 1px solid #ff52bf;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  font-size: 1em;
+}
+
+/*
+*   _____ ___   ___ _____ _____ ____
+*  |  ___/ _ \ / _ \_   _| ____|  _ \
+*  | |_ | | | | | | || | |  _| | |_) |
+*  |  _|| |_| | |_| || | | |___|  _ <
+*  |_|   \___/ \___/ |_| |_____|_| \_\
+*
+*
+*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */

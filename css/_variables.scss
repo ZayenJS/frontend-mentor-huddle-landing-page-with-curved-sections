@@ -1,0 +1,30 @@
+$primary: hsl(322, 100%, 66%); //pink
+$dark-cyan: hsl(192, 100%, 9%); // very dark cyan
+$pale-blue: hsl(207, 100%, 98%); //very pale blue
+
+// mobile breakpoint
+$screen-mobile-min: 375px;
+
+// desktop breakpoint
+$screen-desktop-min: 1440px;
+
+// mobile devices
+@mixin mobile {
+	@media (min-width: #{$screen-mobile-min}) {
+		@content;
+	}
+}
+
+// desktop
+@mixin desktop {
+	@media (min-width: #{$screen-desktop-min}) {
+		@content;
+	}
+}
+
+@mixin flex($align, $justify, $flex-flow) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-flow: $flex-flow;
+}
