@@ -1,4 +1,10 @@
 #cta {
 	@include flex(center, center, column nowrap);
 	padding: 4rem 0;
+	text-align: center;
+	font-size: 0.7rem;
+
+	@include md {
+		font-size: 1.1rem;
+	}
 }

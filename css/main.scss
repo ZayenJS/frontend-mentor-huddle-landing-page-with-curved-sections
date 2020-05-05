@@ -100,9 +100,11 @@ h2 {
 .conversation__info {
 	@include flex(stretch, center, column nowrap);
 	order: 2;
+	padding-bottom: 2rem;
 
 	@include md {
 		order: 4;
+		padding-bottom: 0;
 	}
 }
 

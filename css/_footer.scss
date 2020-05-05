@@ -3,10 +3,6 @@
 	color: #fff;
 	padding-top: 2rem;
 	margin-top: 2rem;
-	.wave {
-		height: fit-content;
-	}
-
 	div,
 	p {
 		background-color: #0a262e;
@@ -16,8 +12,12 @@
 .footer__contact,
 .footer__newsletter {
 	padding: 4rem;
+	min-width: 100vw;
 	width: 50%;
-	min-width: 375px;
+
+	@include md {
+		min-width: 375px;
+	}
 	h3 {
 		font-size: 1.2em;
 		font-weight: bold;
@@ -32,6 +32,21 @@
 		p:first-of-type {
 			width: 75%;
 		}
+	}
+}
+
+.footer__newsletter {
+	order: 1;
+	@include md {
+		order: 2;
+	}
+}
+
+.footer__contact {
+	order: 2;
+
+	@include md {
+		order: 1;
 	}
 }
 
@@ -81,6 +96,7 @@
 }
 
 .attribution {
+	order: 4;
 	width: 100%;
 	font-size: 1.2rem;
 	text-align: center;
