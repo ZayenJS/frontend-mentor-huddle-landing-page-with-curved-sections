@@ -6,10 +6,20 @@
 	}
 
 	div {
-		@include flex(center, space-around, row wrap);
+		@include flex(center, space-around, column nowrap);
+
+		@include sm {
+			flex-flow: row wrap;
+		}
+
 		p {
-			width: fit-content;
 			@include flex(center, center, column nowrap);
+			width: fit-content;
+			margin-top: 2rem;
+
+			@include sm {
+				margin: 0;
+			}
 			img {
 				width: 2em;
 				align-self: flex-start;

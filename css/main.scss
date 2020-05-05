@@ -38,6 +38,15 @@ h2 {
 
 .wave {
 	width: 100%;
+	height: 5rem;
+}
+
+.wave:first-child {
+	order: 0;
+}
+
+.wave:last-child {
+	order: 5;
 }
 
 #grow,
@@ -58,8 +67,12 @@ h2 {
 	padding: 3rem 0;
 	margin: 3rem 0;
 	div {
+		min-width: 100vw;
 		width: 50%;
-		min-width: 375px;
+
+		@include md {
+			min-width: 375px;
+		}
 
 		img {
 			display: block;
@@ -86,6 +99,21 @@ h2 {
 .grow__info,
 .conversation__info {
 	@include flex(stretch, center, column nowrap);
+	order: 2;
+
+	@include md {
+		order: 4;
+	}
+}
+
+.users__illustration,
+.grow__illustration,
+.conversation__illustration {
+	order: 1;
+
+	@include md {
+		order: 4;
+	}
 }
 
 .link--cta {

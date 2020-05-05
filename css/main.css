@@ -38,6 +38,19 @@ h2 {
 
 .wave {
   width: 100%;
+  height: 5rem;
+}
+
+.wave:first-child {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
+.wave:last-child {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 
 #grow,
@@ -77,8 +90,16 @@ h2 {
 #grow div,
 #conversation div,
 #users div {
+  min-width: 100vw;
   width: 50%;
-  min-width: 375px;
+}
+
+@media (min-width: 768px) {
+  #grow div,
+  #conversation div,
+  #users div {
+    min-width: 375px;
+  }
 }
 
 #grow div img,
@@ -118,6 +139,37 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media (min-width: 768px) {
+  .users__info,
+  .grow__info,
+  .conversation__info {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+.users__illustration,
+.grow__illustration,
+.conversation__illustration {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media (min-width: 768px) {
+  .users__illustration,
+  .grow__illustration,
+  .conversation__illustration {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
 }
 
 .link--cta {
@@ -216,16 +268,22 @@ h2 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+@media (min-width: 576px) {
+  #community div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
 }
 
 #community div p {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +297,16 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 2rem;
+}
+
+@media (min-width: 576px) {
+  #community div p {
+    margin: 0;
+  }
 }
 
 #community div p img {
