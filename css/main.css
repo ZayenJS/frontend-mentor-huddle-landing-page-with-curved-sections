@@ -78,6 +78,7 @@ h2 {
 #conversation div,
 #users div {
   width: 50%;
+  min-width: 375px;
 }
 
 #grow div img,
@@ -125,7 +126,7 @@ h2 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1em;
+  font-size: 1.4em;
   padding: 1rem 4rem;
   color: #fff;
   background-color: #ff52bf;
@@ -157,7 +158,13 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  font-size: 1rem;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 992px) {
+  .header {
+    font-size: 1rem;
+  }
 }
 
 .header__logo {
@@ -191,7 +198,13 @@ h2 {
 */
 #community {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.6rem;
+}
+
+@media (min-width: 992px) {
+  #community {
+    font-size: 1rem;
+  }
 }
 
 #community div {
@@ -249,12 +262,18 @@ h2 {
 .community__info {
   margin: 2rem auto;
   max-width: 440px;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 .screen-mockups {
   margin: 2rem 0;
-  width: inherit;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .screen-mockups {
+    width: inherit;
+  }
 }
 
 /*
@@ -315,6 +334,7 @@ h2 {
 .footer__newsletter {
   padding: 4rem;
   width: 50%;
+  min-width: 375px;
 }
 
 .footer__contact h3,
