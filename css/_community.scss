@@ -1,0 +1,39 @@
+#community {
+	text-align: center;
+	font-size: 1rem;
+
+	div {
+		@include flex(center, space-around, row wrap);
+		p {
+			width: fit-content;
+			@include flex(center, center, column nowrap);
+			img {
+				width: 2em;
+				align-self: flex-start;
+			}
+
+			strong {
+				font-weight: bold;
+				font-size: 4em;
+				margin: 0.5rem 0;
+			}
+		}
+	}
+}
+
+.community__title {
+	font-weight: bold;
+	font-size: 2em;
+	word-spacing: 5px;
+}
+
+.community__info {
+	margin: 2rem auto;
+	max-width: 440px;
+	font-size: 0.9em;
+}
+
+.screen-mockups {
+	margin: 2rem 0;
+	width: inherit;
+}

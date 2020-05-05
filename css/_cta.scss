@@ -1,0 +1,4 @@
+#cta {
+	@include flex(center, center, column nowrap);
+	padding: 4rem 0;
+}
