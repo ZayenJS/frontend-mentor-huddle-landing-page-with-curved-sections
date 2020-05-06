@@ -1,17 +1,27 @@
 .footer {
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: #fff;
 	padding-top: 2rem;
 	margin-top: 2rem;
+
+	@include md {
+		font-size: 1rem;
+	}
 	div,
 	p {
-		background-color: #0a262e;
+		background-color: #00252e;
+	}
+
+	.footer__logo {
+		padding: 0.5rem 0;
+		margin-bottom: 1rem;
+		width: 12em;
 	}
 }
 
 .footer__contact,
 .footer__newsletter {
-	padding: 4rem;
+	padding: 2rem;
 	min-width: 100vw;
 	width: 50%;
 
@@ -19,7 +29,7 @@
 		min-width: 375px;
 	}
 	h3 {
-		font-size: 1.2em;
+		font-size: 1.5rem;
 		font-weight: bold;
 		margin-bottom: 1rem;
 		padding: 0.5rem 0;
@@ -30,7 +40,9 @@
 		margin: auto;
 
 		p:first-of-type {
-			width: 75%;
+			@include md {
+				width: 75%;
+			}
 		}
 	}
 }
@@ -50,10 +62,6 @@
 	}
 }
 
-.footer__logo {
-	margin-bottom: 1rem;
-}
-
 .footer__contact__icon {
 	margin: 1rem 0;
 	img {
@@ -62,37 +70,63 @@
 }
 
 .social-network {
-	padding: 2rem 0;
+	margin: 2rem 0;
 	.icon {
+		cursor: pointer;
 		margin-right: 1rem;
 	}
 }
 
 .footer__subscribe__input-container {
-	@include flex(center, flex-start, row wrap);
+	@include flex(stretch, space-between, column nowrap);
 	padding: 0;
 	height: 2rem;
 	margin: 2rem 0;
 	width: 100%;
 
+	@include md {
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
 	input {
+		border: 1px solid #fff;
+		padding: 0.4rem;
+		font-size: 1.1em;
+		border-radius: 5px;
 		height: 100%;
-		flex-grow: 2;
+		transition: all 250ms ease-in-out;
+
+		@include md {
+			width: calc(100% - 10rem);
+		}
+	}
+
+	input:focus {
+		border: 1px solid $primary;
+		transform: scale(1.01);
 	}
 }
 
 .subscribe--btn {
 	display: flex;
 	align-items: center;
-	margin-left: 2rem;
 	height: 100%;
 	width: fit-content;
 	font-size: 1em;
-	padding-right: 2rem;
-	padding-left: 2rem;
+	font-weight: bold;
+	padding: 0.4rem 2rem;
 	color: #fff;
 	background-color: $primary;
 	border-radius: 5px;
+	margin: 1rem 0;
+	align-self: flex-end;
+
+	@include md {
+		margin: 0;
+		align-self: center;
+		font-weight: normal;
+	}
 }
 
 .attribution {
